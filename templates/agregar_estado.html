@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Estado</title>
+</head>
+<body>
+    <h1>Agregar Estado y Observaciones</h1>
+    <form action="/agregar_estado" method="post">
+        <input type="hidden" name="id_solicitud" value="{{ id_solicitud }}">
+        Nuevo Estado: <input type="text" name="nuevo_estado" required><br>
+        Observaciones: <input type="text" name="observaciones" required><br>
+        <input type="submit" value="Guardar">
+    </form>
+
+     <body>
+        <h1>Ingrese un Nuevo Estado y Observaciones</h1>
+        <form action="/guardar_nuevo_estado" method="post">
+            <input type="hidden" name="id_solicitud" value="{{ id_solicitud }}">
+            Nuevo Estado: <input type="text" name="nuevo_estado" required><br>
+            Observaciones: <input type="text" name="observaciones" required><br>
+            Fecha: <input type="text" name="fecha" required><br>
+            <input type="submit" value="Guardar">
+        </form>
+    </body>
+
+</body>
+</html>

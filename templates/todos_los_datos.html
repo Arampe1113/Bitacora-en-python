@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todos los Datos</title>
+</head>
+<body>
+    <h1>Todos los Datos Guardados</h1>
+    <table border="1">
+        <tr>
+            <th>ID de Solicitud</th>
+            <th>Fecha Actual</th>
+            <th>Reclutador</th>
+            <th>Generador</th>
+            <th>Lider de GH</th>
+            <th>Lider de la Vacante</th>
+            <th>Empresa</th>
+            <th>Zona</th>
+            <th>Planta</th>
+            <th>Numero de Vacantes</th>
+        </tr>
+        {% for id_solicitud, datos in datos.items() %}
+        <tr>
+            <td>{{ id_solicitud }}</td>
+            <td>{{ datos['fecha_actual'] }}</td>
+            <td>{{ datos['reclutador'] }}</td>
+            <td>{{ datos['generador'] }}</td>
+            <td>{{ datos['lider_gh'] }}</td>
+            <td>{{ datos['lider_vacante'] }}</td>
+            <td>{{ datos['empresa'] }}</td>
+            <td>{{ datos['zona'] }}</td>
+            <td>{{ datos['planta'] }}</td>
+            <td>{{ datos['num_vacantes'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
